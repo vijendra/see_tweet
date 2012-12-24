@@ -1,0 +1,9 @@
+%h4 Tweets
+- unless @tweets.blank?
+  - @tweets.each do |tweet|
+    = render 'tweet', {:tweet => tweet}
+- else
+  No tweets yet    
+ 
+%hr                                              
+= paginate @tweets  
